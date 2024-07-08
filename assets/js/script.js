@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
@@ -156,3 +154,33 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// email 
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const data = new FormData(form);
+  const xhr = new XMLHttpRequest();
+  const url = 'https://formspree.io/f/myzgyvaw';
+
+  xhr.open('POST', url, true);
+  xhr.setRequestHeader('Accept', 'application/json');
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      const response = document.getElementById('formMessage');
+      response.style.display = 'block';
+
+      if (xhr.status === 200) {
+        response.innerHTML = 'Message sent successfully!';
+        response.className = 'form-message success';
+        form.reset();
+      } else {
+        response.innerHTML = 'Failed to send message. Please try again later.';
+        response.className = 'form-message error';
+      }
+    }
+  };
+
+  xhr.send(data);
+});
