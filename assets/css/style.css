@@ -850,6 +850,14 @@ main {
 
 .skills-list { padding: 20px; }
 
+.skills-list-icons { 
+  padding: 20px;  
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 10px; 
+}
+
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
 
@@ -879,10 +887,51 @@ main {
   border-radius: inherit;
 }
 
+.content-card-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 15px;
+  padding-top: 45px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
+  z-index: 1;
+}
 
+.content-card-skills::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
 
+.horizontal-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 10;
+  margin: 10; 
+}
 
+.skill-icon{
+  width: 15%;
+  height: 15%;
+  box-sizing: border-box;
+  margin: 0 10px;
+}
 
+@media (max-width: 480px) {
+  .skill-icon {
+    width: 40%; /* Adjust width for mobile phones */
+    height: 5%; /* Maintain aspect ratio */
+    margin: 0 2px; /* Further reduce margin */
+  }
+}
 /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
@@ -943,6 +992,7 @@ main {
 }
 
 .select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+
 
 .project-list {
   display: grid;
