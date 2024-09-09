@@ -1038,7 +1038,14 @@ main {
   font-weight: var(--fw-300);
 }
 
-
+.rounded-badge {
+  display: inline-block;
+  background-color:rgb(43, 43, 44);
+  color: var(--light-gray-70); /* Adjust text color as needed */
+  padding: 1px 10px; /* Add some padding for spacing */
+  border-radius: 10px; /* Makes the borders rounded */
+  margin: 2px;
+}
 
 
 
