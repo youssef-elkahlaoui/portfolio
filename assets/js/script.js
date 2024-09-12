@@ -183,4 +183,3 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
   xhr.send(data);
 });
-

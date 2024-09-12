@@ -912,7 +912,7 @@ main {
 
 .horizontal-list {
   display: flex;
-  justify-content: space-around;
+  justify-content:center;
   list-style: none;
   padding: 10;
   margin: 10; 

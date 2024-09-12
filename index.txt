@@ -14,7 +14,6 @@ my Personal portfolio structure
 |_Skills in Web development
 |_Skills On Ai 
 |_Skills on DevOps
-
 -Portfolio Page 🕔
 |_Projects
 
